@@ -1,3 +1,7 @@
 footer p.social-media a + a {
     margin-left: 10px;
 }
+
+.list-group-item > .list-group-item-text:first-of-type {
+    margin-bottom: 10px;
+}

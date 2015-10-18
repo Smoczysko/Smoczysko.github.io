@@ -1,0 +1,466 @@
+:longform:
+:sectids!:
+:imagesdir: images
+:source-highlighter: highlightjs
+:language: no-highlight
+:dzslides-style: stormy-jm
+:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
+:dzslides-transition: fade
+:dzslides-highlight: monokai
+:experimental:
+:toc2:
+:sectanchors:
+:idprefix:
+:idseparator: -
+:icons: font
+:linkattrs:
+
+= Obiektowe Języki Programowania Interfejsy
+Łukasz Rybka ; Gdańsk 2015
+
+[.topic]
+== Interfejsy
+
+====
+[quote, Bruce Eckel]
+____
+Interfejsy i klasy abstrakcyjne to strukturyzowane środki oddzielenia interfejsu od implementacji.
+____
+====
+
+[.topic]
+== Interfejsy
+
+====
+[quote, Bruce Eckel]
+____
+Słowo kluczowe *interface* generuje (...) abstrakcyjną klasę bazową, która jest całkowicie (...) implementacji.
+____
+====
+
+[.topic.source]
+== Przykład prostego interfejsu
+
+[source,java]
+----
+public interface Drawable {
+    public void draw();
+
+    public void erase();
+}
+
+public class Circle implements Drawable {
+    @Override
+    public void draw() {
+        // ...
+    }
+
+    @Override
+    public void erase() {
+        // ...
+    }
+
+    public static void main(String[] args) {
+        Drawable drawable = new Circle();
+    }
+}
+----
+
+[.topic.source]
+== Przykład prostego interfejsu
+
+[source,java]
+----
+public class Painting implements Drawable {
+    @Override
+    public void draw() {
+        // ...
+    }
+
+    @Override
+    public void erase() {
+        // ...
+    }
+
+    public static void main(String[] args) {
+        Drawable circle = new Circle();
+        circle.draw();
+        circle.erase();
+
+        Drawable paiting = new Painting();
+        paiting.draw();
+        paiting.erase();
+    }
+}
+----
+
+[.topic]
+== Zasady tworzenia interfejsów
+
+[.incremental]
+* Interfejsy nie posiadają implementacji (***)
+* Mogą podlegać dziedziczeniu (*!*)
+* Wszystkie pola interfejsu są domyślnie (niejawnie) statyczne i finalne
+
+[.topic]
+== Implementacja wielu interfejsow
+
+[.incremental]
+* Pozwala na osiągnięcie efektu niedostępnego dla dziedziczenia - klasa może być wielu niezależnych typów
+* Lepsza ekapsulacja - ukrywanie części implementacji niezwiązanej z danym typem
+* Nie jest idealna...
+
+[.topic.source]
+== Implementacja wielu interfejsów
+
+[source,java]
+----
+public interface Drawable {
+    public void draw();
+
+    public void erase();
+}
+
+public interface Printable {
+    public void print();
+}
+----
+
+[.topic.source]
+== Implementacja wielu interfejsów
+
+[source,java]
+----
+public class Paiting implements Drawable, Printable {
+    @Override
+    public void draw() {
+        // ...
+    }
+
+    @Override
+    public void erase() {
+        // ...
+    }
+
+    @Override
+    public void print() {
+        // ...
+    }
+}
+----
+
+[.topic.source]
+== Implementacja wielu interfejsów
+
+[source,java]
+----
+public class Printer {
+    public static void print(Printable printable) {
+        printable.print();
+    }
+}
+
+public class Drawer {
+    public static void draw(Drawable drawable) {
+        drawable.draw();
+    }
+    public static void erase(Drawable drawable) {
+        drawable.erase();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Painting painting = new Painting();
+        Drawer.draw(painting);
+        Printer.print(painting);
+        Drawer.erase(painting);
+    }
+}
+----
+
+[.topic.source]
+== Problemy implementacji wielu interfejsów
+
+[source,java]
+----
+public interface Interface1 {
+    void func();
+}
+
+public interface Interface2 {
+    int func(int i);
+}
+
+public interface Interface3 {
+    int func();
+}
+----
+
+[.topic.source]
+== Problemy implementacji wielu interfejsów
+
+[source,java]
+----
+public interface Interface1 { void func(); }
+public interface Interface2 { int func(int i); }
+public interface Interface3 { int func(); }
+
+public class Impl1 implements Interface1 {
+    @Override
+    void func() {
+        // ...
+    }
+}
+
+public class Impl2 implements Interface2 {
+    @Override
+    int func(int i) {
+        // ...
+    }
+}
+
+public class Impl3 implements Interface3 {
+    @Override
+    int func() {
+        // ...
+    }
+}
+----
+
+[.topic.source]
+== Problemy implementacji wielu interfejsów
+
+[source,java]
+----
+public interface Interface1 { void func(); }
+public interface Interface2 { int func(int i); }
+public interface Interface3 { int func(); }
+
+public class Impl1And2 implements Interface1, Interface2 {
+    @Override
+    void func() {
+        // ...
+    }
+
+    @Override
+    int func(int i) {
+        // ...
+    }
+}
+----
+
+[.topic.source]
+== Problemy implementacji wielu interfejsów
+
+[source,java]
+----
+public interface Interface1 { void func(); }
+public interface Interface2 { int func(int i); }
+public interface Interface3 { int func(); }
+
+public class FullImplementation implements Interface1, Interface2, Interface3 {
+    // ...
+}
+----
+
+[.topic.source]
+== Problemy implementacji wielu interfejsów
+
+[source,java]
+----
+public interface Interface1 { void func(); }
+public interface Interface2 { int func(int i); }
+public interface Interface3 { int func(); }
+
+public class FullImplementation implements Interface1, Interface2, Interface3 {
+    @Override
+    void func() {
+        // ...
+    }
+
+    @Override
+    int func(int i) {
+        // ...
+    }
+
+    @Override
+    int func() {
+        // ...
+    }
+}
+----
+
+[.topic.source]
+== Dziedziczenie interfejsów
+
+[source,java]
+----
+public interface Printable {
+    public void print();
+}
+
+public interface MobilePrintable extends Printable {
+    public void mobilePrint();
+}
+
+public class Paiting implements MobilePrintable {
+    @Override
+    public void print() {
+        // ...
+    }
+
+    @Override
+    public void mobilePrint() {
+        // ...
+    }
+}
+----
+
+[.topic]
+== Polimorfizm raz jeszcze...
+
+====
+[quote, Bertrand Meyer]
+____
+(...) przypisania, w których typ źródła jest inny niż typ celu są nazywane *przypisaniami polimorficznymi*.
+____
+====
+
+[.topic]
+== Przykład dziedziczenia
+
+image::inheritance-uml.png[Hierarchia dziedziczenia, 450, role="middle"]
+
+[.topic]
+== Nowości dotyczące interfejsów w Java 8
+
+[.incremental]
+* Domyślne (*default*) implementacje metod
+* Metody statyczne
+* Nowe problemy...
+
+[.topic.source]
+== Metody domyślne
+
+[source,java]
+----
+public interface Interface1 {
+    void method1(String str);
+
+    default void log(String str) {
+        System.out.println("I1 logging::"+str);
+        print(str);
+    }
+}
+
+public class Impl1 implements Interface1 {
+    @Override
+    void method1(String str) {
+        // ...
+    }
+
+    public static void main(String[] args) {
+        Impl1 impl = new Impl1();
+
+        impl.method1();
+        impl.log("Something...");
+    }
+}
+----
+
+[.topic.source]
+== Metody domyślne
+
+[source,java]
+----
+public interface Interface2 {
+    void method2();
+
+    default void log(String str) {
+        System.out.println("I2 logging::"+str);
+    }
+
+}
+
+public class Impl1 implements Interface1, Interface2 {
+    @Override void method1(String str) { /** ... */ }
+    @Override void method2(String str) { /** ... */ }
+
+    public static void main(String[] args) {
+        Impl1 impl = new Impl1();
+        impl.log("Something..."); // ????
+    }
+}
+----
+
+[.topic.source]
+== Metody domyślne
+
+[source,java]
+----
+public class Impl1 implements Interface1, Interface2 {
+    @Override void method1(String str) { /** ... */ }
+    @Override void method2(String str) { /** ... */ }
+
+    @Override
+    public void log(String str){
+        System.out.println("Impl1 logging::"+str);
+        Interface1.print("abc");
+    }
+
+    public static void main(String[] args) {
+        Impl1 impl = new Impl1();
+        impl.log("Something...");
+    }
+}
+----
+
+[.topic.source]
+== Statyczne metody w interfejsie
+
+[source,java]
+----
+public interface StringUtils {
+    default void print(String str) {
+        if (!isNull(str)) {
+            System.out.println("MyData Print::" + str);
+        }
+    }
+
+    static boolean isNull(String str) {
+        System.out.println("Interface Null Check");
+
+        return str == null ? true : "".equals(str) ? true : false;
+    }
+}
+----
+
+[.topic.source]
+== Statyczne metody w interfejsie - main (?!)
+
+[source,java]
+----
+public interface StringUtils {
+    default void print(String str) {
+        if (!isNull(str)) {
+            System.out.println("MyData Print::" + str);
+        }
+    }
+
+    static boolean isNull(String str) {
+        System.out.println("Interface Null Check");
+
+        return str == null ? true : "".equals(str) ? true : false;
+    }
+
+    public static void main(String[] args) {
+        /**
+         * -_-"
+         */
+    }
+}
+----
+
+== ! questions
+image::any-questions.jpg[caption="Pytania?", crole="invert", role="stretch-x"]

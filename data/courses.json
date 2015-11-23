@@ -1,0 +1,16 @@
+{
+  "courses": [
+    {
+      "name": "Java Enterprise Technologies",
+      "code": "jet"
+    },
+    {
+      "name": "Object-Oriented Programming Languages",
+      "code": "oopl"
+    },
+    {
+      "name": "Rich User Interfaces in Web Applications",
+      "code": "rui"
+    }
+  ]
+}

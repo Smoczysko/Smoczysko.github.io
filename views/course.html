@@ -1,0 +1,61 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>{{ course.name }}</h1>
+        <p>{{ course.description }}</p>
+        <p ng-show="course.goal">{{ course.goal }}</p>
+    </div>
+</div>
+
+<div class="container">
+    <quote text="{{ course.quote.text }}" author="{{ course.quote.author }}"></quote>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Lectures</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="bs-component">
+                <div class="list-group">
+                    <lecture lecture="{{ lecture }}" ng-repeat="lecture in course.lectures"></lecture>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-show="course.resources">
+        <div class="col-lg-12">
+            <h2>Additional resources</h2>
+        </div>
+    </div>
+
+    <div class="row" ng-show="course.resources">
+        <div class="col-lg-12">
+            <div class="bs-component">
+                <div class="list-group">
+                    <additional-resource resource="{{ resource }}" ng-repeat="resource in course.resources"></additional-resource>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-show="course.literature">
+        <div class="col-lg-12">
+            <h2>Literature</h2>
+        </div>
+    </div>
+
+    <div class="row" ng-show="course.literature">
+        <div class="col-lg-12">
+            <div class="bs-component">
+                <div class="list-group">
+                    <course-literature literature="{{ lit}}" ng-repeat="lit in course.literature"></course-literature>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <custom-footer></custom-footer>
+</div>

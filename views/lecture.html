@@ -1,0 +1,42 @@
+<div class="list-group-item">
+    <h4 class="list-group-item-heading">{{ title }}</h4>
+    <p class="list-group-item-text">{{ description }}</p>
+    <p class="list-group-item-text" ng-show="slides">
+        <a href="courses/{{ code }}/{{ slides }}/slides.html" target="_blank">
+            <i class="fa fa-html5"></i> Slides
+        </a>
+    </p>
+    <p class="list-group-item-text" ng-hide="slides">
+        <i class="fa fa-html5"></i> Slides <small>(not yet available)</small>
+    </p>
+
+    <p class="list-group-item-text" ng-show="slides">
+        <a href="courses/{{ code }}/{{ slides }}/slides.pdf" target="_blank">
+            <i class="fa fa-file-pdf-o"></i> Slides in PDF
+        </a>
+    </p>
+    <p class="list-group-item-text" ng-hide="slides">
+        <i class="fa fa-github"></i> Slides in PDF <small>(not yet available)</small>
+    </p>
+
+    <p class="list-group-item-text" ng-show="sources">
+        <a href="https://github.com/Smoczysko/presentations/tree/master/{{ sources }}" target="_blank">
+            <i class="fa fa-github"></i> Slides sources
+        </a>
+    </p>
+    <p class="list-group-item-text" ng-hide="sources">
+        <i class="fa fa-github"></i> Slides sources <small>(not yet available)</small>
+    </p>
+
+    <p class="list-group-item-text" ng-show="examples">
+        <a href="{{ examples }}" target="_blank">
+            <i class="fa fa-github"></i> Examples
+        </a>
+    </p>
+
+    <p class="list-group-item-text" ng-show="exercises">
+        <a href="{{ exercises }}" target="_blank">
+            <i class="fa fa-download"></i> Exercises
+        </a>
+    </p>
+</div>

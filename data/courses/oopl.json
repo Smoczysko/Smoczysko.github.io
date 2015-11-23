@@ -1,0 +1,80 @@
+{
+  "name": "Object-Oriented Programming Languages",
+  "code": "oopl",
+  "description": "Materials for Object-Oriented Programming Languages course given at Gdańsk University of Technology, faculty of applied physics and mathematics in 2015/16.",
+  "goal": "Course goal is to give students brief understanding of programming in Java and it's third-one in series of courses about OO programming (from theory to practical uses in different platforms and languages).",
+  "quote": {
+    "text": "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+    "author": "Benjamin Franklin"
+  },
+  "lectures": [
+    {
+      "title": "Introduction",
+      "description": "Course introduction with basic information about rules, grades and covered materials.",
+      "slides": "01-introduction",
+      "sources": "object-oriented-programming-languages/01-javascript"
+    },
+    {
+      "title": "Classes and objects",
+      "description": "Basic information about classes definition and creation.",
+      "slides": "02-classes-and-object",
+      "sources": "object-oriented-programming-languages/02-classes-and-object"
+    },
+    {
+      "title": "Inheritance and polymorphism",
+      "description": "Inheritance in practice in Java: basics mechanics, super(), overriding and overloading, abstract classes and polymorphism.",
+      "slides": "03-inheritance",
+      "sources": "object-oriented-programming-languages/03-inheritance"
+    },
+    {
+      "title": "Interfaces",
+      "description": "Interfaces and object relation called composition.",
+      "slides": "04-interfaces",
+      "sources": "object-oriented-programming-languages/01-javascript"
+    },
+    {
+      "title": "Collections",
+      "description": "Different kinds of collections and their application with different kinds of problems. Performance issues and generics will be briefly mentioned during this lecture.",
+      "slides": "05-collections",
+      "sources": "object-oriented-programming-languages/05-collections"
+    },
+    {
+      "title": "Exceptions",
+      "description": "Handling different kinds of exceptions in Java, exceptions hierarchy and creation of custom exceptions specific to our application.",
+      "slides": "06-exceptions",
+      "sources": "object-oriented-programming-languages/06-exceptions"
+    }
+  ],
+  "literature": [
+    {
+      "title": "Thinking in Java, 4th edition",
+      "description": "Bruce Eckel"
+    },
+    {
+      "title": "Object-Oriented Software Construction",
+      "description": "Bertrand Meyer"
+    },
+    {
+      "title": "OCA/OCP Java SE 7 Programmer I & II Study Guide",
+      "description": "Kathy Sierra and Bert Bates"
+    },
+    {
+      "title": "Effective Java",
+      "description": "Joshua Bloch"
+    },
+    {
+      "title": "Java Code Conventions",
+      "description": "Sun Microsystems",
+      "links": [
+        {
+          "name": "PDF version",
+          "href": "http://www.oracle.com/technetwork/java/codeconventions-150003.pdf"
+        },
+        {
+          "name": "Online version",
+          "href": "http://www.oracle.com/technetwork/java/codeconvtoc-136057.html"
+        }
+      ]
+    }
+  ]
+}

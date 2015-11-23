@@ -1,0 +1,26 @@
+{
+  "name": "Smoczysko.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Smoczysko/Smoczysko.github.io.git"
+  },
+  "author": "Łukasz Rybka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smoczysko/Smoczysko.github.io/issues"
+  },
+  "homepage": "http://smoczysko.github.io",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-bower": "0.0.11",
+    "gulp-clean": "^0.3.1",
+    "gulp-inject": "^3.0.0",
+    "run-sequence": "^1.1.5"
+  }
+}

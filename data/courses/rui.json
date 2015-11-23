@@ -1,0 +1,38 @@
+{
+  "name": "Rich User Interfaces in Web Applications",
+  "code": "rui",
+  "description": "Materials for Rich User Interfaces in Web Applications course co-lectured at Polish-Japanese Academy of Information Technology in 2015.",
+  "quote": {
+    "text": "He who would learn to fly one day must first learn to stand and walk and run and climb and dance; one cannot fly into flying.",
+    "author": "Friedrich Nietzsche"
+  },
+  "lectures": [
+    {
+      "title": "JavaScript",
+      "description": "JavaScript fundamentals for building proper module/library.",
+      "slides": "01-javascript",
+      "sources": "rich-user-interfaces/01-javascript",
+      "exercises": "courses/rui/01-javascript/exercises.zip"
+    },
+    {
+      "title": "jQuery plugin",
+      "description": "Basics of creating different types of jQuery plugins: mutters, utility and widgets.",
+      "slides": "02-jquery",
+      "sources": "rich-user-interfaces/02-jquery",
+      "exercises": "courses/rui/02-jquery/exercises.zip"
+    },
+    {
+      "title": "Underscore.js",
+      "description": "Basics of Underscore.js library and building custom extensions.",
+      "slides": "03-underscorejs",
+      "sources": "rich-user-interfaces/03-underscorejs",
+      "exercises": "courses/rui/03-underscoreks/exercises.zip"
+    },
+    {
+      "title": "System.js",
+      "description": "Introduction to modularity in JavaScript based on System.js library - used in AngularJS 2.0.",
+      "slides": "04-systemjs",
+      "sources": "rich-user-interfaces/04-systemjs"
+    }
+  ]
+}

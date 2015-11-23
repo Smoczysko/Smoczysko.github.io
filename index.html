@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en" ng-app="SmoczyskoApp">
+<head>
     <meta charset="UTF-8">
-    <title></title>
+    <title ng-bind="title">Lectures</title>
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/font-awesome.min.css">
+    <!-- endinject -->
+
+    <link rel="stylesheet" href="styles/custom.css">
 </head>
 <body>
-    <script type="text/javascript">
-        var path = window.location.href,
-            separatorIndex = path.lastIndexOf('/');
+    <div ng-view></div>
 
-        // Redirecting to /lectures - only part of this site available at this moment.
-        window.location.href = path.substring(0, separatorIndex) + "/lectures";
-    </script>
+    <script src="lib/js/angular.min.js"></script>
+    
+    <!-- inject:js -->
+    <script src="lib/js/angular-resource.min.js"></script>
+    <script src="lib/js/angular-route.min.js"></script>
+    <script src="lib/js/underscore-min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/directives.js"></script>
+    <script src="scripts/services.js"></script>
+    <!-- endinject -->
 </body>
 </html>

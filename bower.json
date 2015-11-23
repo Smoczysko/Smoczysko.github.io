@@ -1,0 +1,18 @@
+{
+  "name": "Smoczysko.github.io",
+  "version": "1.0.0",
+  "authors": [
+    "Łukasz Rybka"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://smoczysko.github.io",
+  "dependencies": {
+    "angular": "~1.4.7",
+    "bootswatch": "~3.3.5",
+    "fontawesome": "~4.4.0",
+    "angular-route": "~1.4.7",
+    "angular-resource": "~1.4.7",
+    "underscore": "~1.8.3"
+  }
+}

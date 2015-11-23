@@ -1,0 +1,65 @@
+{
+  "name": "Java Enterprise Technologies",
+  "code": "jet",
+  "description": "Materials for Java Enterprise Technologies course co-lectured at University of Gdańsk, faculty of applied physics and mathematics from 2014.",
+  "goal": "Course goal is to give students brief understanding of Java Enterprise Edition 6/7 Web Profile and its APIs.",
+  "quote": {
+    "text": "He who learns but does not think, is lost! He who thinks but does not learn is in great danger.",
+    "author": "Confucius"
+  },
+  "lectures": [
+    {
+      "title": "Servlets",
+      "description": "Basic information about servlets and request handling in Java EE.",
+      "slides": "02-servlets",
+      "sources": "java-enterprise-technologies/02-servlets",
+      "examples": "https://github.com/Smoczysko/introduction-to-jee-examples/tree/master/servlets"
+    },
+    {
+      "title": "JSP and JSTL",
+      "description": "Introduction to Java Server Pages and JSP Standard Tag Library",
+      "slides": "03-jsp",
+      "sources": "java-enterprise-technologies/03-jsp",
+      "examples": "https://github.com/Smoczysko/introduction-to-jee-examples/tree/master/jsp"
+    },
+    {
+      "title": "JAX-RS",
+      "description": "How to (and how not to) build RESTful web services with core J2EE library - JAX-RS with JSON API.",
+      "examples": "https://github.com/Smoczysko/introduction-to-jee-examples/tree/master/jax-rs"
+    },
+    {
+      "title": "JPA #1",
+      "description": "Introduction to Java Persistent API - Object Relation Mapping basics.",
+      "examples": "https://github.com/Smoczysko/introduction-to-jee-examples/tree/master/jpa"
+    },
+    {
+      "title": "JPA #3",
+      "description": "Querying JPA entities with Java Persistance Query Language - JPQL.",
+      "examples": "https://github.com/Smoczysko/introduction-to-jee-examples/tree/master/jpa"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Bootstrap application",
+      "description": "Basic and minimalistic application skeleton for JEE6 (Web Profile) application run with Maven Jetty Plugin.",
+      "links": [
+        {
+          "title": "Code",
+          "class": "fa-github",
+          "href": "https://github.com/Smoczysko/introduction-to-jee-ug"
+        }
+      ]
+    },
+    {
+      "title": "Page visit counter example",
+      "description": "Example of how to use servlet context functionality to implement sharable page visit counter deployed to Heroku.",
+      "links": [
+        {
+          "title": "Application",
+          "class": "fa-link ",
+          "href": "http://jee-context-example.herokuapp.com"
+        }
+      ]
+    }
+  ]
+}

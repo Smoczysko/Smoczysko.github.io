@@ -1,0 +1,9 @@
+<div class="list-group-item">
+    <h4 class="list-group-item-heading">{{ title }}</h4>
+    <p class="list-group-item-text">{{ description }}</p>
+    <p class="list-group-item-text" ng-repeat="link in links">
+        <a href="{{ link.href }}" target="_blank">
+            <i class="fa {{ link.class }}"></i> {{ link.title }}
+        </a>
+    </p>
+</div>

@@ -30,12 +30,14 @@
     {
       "title": "JPA #1",
       "description": "Introduction to Java Persistent API - Object Relation Mapping basics.",
-      "examples": "https://github.com/Smoczysko/introduction-to-jee-examples/tree/master/jpa"
+      "slides": "06-jpa-1",
+      "sources": "java-enterprise-technologies/06-jpa-1",
+      "examples": "https://github.com/Smoczysko/introduction-to-jee-examples/tree/master/jpa/core"
     },
     {
       "title": "JPA #3",
       "description": "Querying JPA entities with Java Persistance Query Language - JPQL.",
-      "examples": "https://github.com/Smoczysko/introduction-to-jee-examples/tree/master/jpa"
+      "examples": "https://github.com/Smoczysko/introduction-to-jee-examples/tree/master/jpql"
     }
   ],
   "resources": [

@@ -11,6 +11,10 @@
     {
       "name": "Rich User Interfaces in Web Applications",
       "code": "rui"
+    },
+    {
+      "name": "Introduction to Java",
+      "code": "itj"
     }
   ]
 }

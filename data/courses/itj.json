@@ -1,0 +1,63 @@
+{
+  "name": "Introduction to Java",
+  "code": "itj",
+  "description": "Materials for Introduction to Java course given at Gdańsk University of Technology, faculty of applied physics and mathematics in 2015/16.",
+  "goal": "Course goal is to give students brief understanding of Java Standard Edition 6/7 and its APIs.",
+  "quote": {
+    "text": "I am always doing that which I cannot do, in order that I may learn how to do it.",
+    "author": "Pablo Picasso"
+  },
+  "lectures": [
+    {
+      "title": "Introduction",
+      "description": "Basic Java SE app running in console - Hangman game",
+      "slides": "01-introduction",
+      "sources": "introduction-to-java/01-introduction"
+    }
+  ],
+  "literature": [
+    {
+      "title": "Thinking in Java, 4th edition",
+      "description": "Bruce Eckel"
+    },
+    {
+      "title": "Object-Oriented Software Construction",
+      "description": "Bertrand Meyer"
+    },
+    {
+      "title": "OCA/OCP Java SE 7 Programmer I & II Study Guide",
+      "description": "Kathy Sierra and Bert Bates"
+    },
+    {
+      "title": "Effective Java",
+      "description": "Joshua Bloch"
+    },
+    {
+      "title": "Java Code Conventions",
+      "description": "Sun Microsystems",
+      "links": [
+        {
+          "name": "PDF version",
+          "href": "http://www.oracle.com/technetwork/java/codeconventions-150003.pdf"
+        },
+        {
+          "name": "Online version",
+          "href": "http://www.oracle.com/technetwork/java/codeconvtoc-136057.html"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "title": "Bootstrap application",
+      "description": "Basic and minimalistic application skeleton for Hangman game in Java SE 7 with Gradle as build and tool.",
+      "links": [
+        {
+          "title": "Code",
+          "class": "fa-github",
+          "href": "https://github.com/Smoczysko/introduction-to-java-laboratories"
+        }
+      ]
+    }
+  ]
+}

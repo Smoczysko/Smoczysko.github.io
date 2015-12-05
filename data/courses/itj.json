@@ -58,6 +58,17 @@
           "href": "https://github.com/Smoczysko/introduction-to-java-laboratories"
         }
       ]
+    },
+    {
+      "title": "Java Tutorial for Complete Beginners",
+      "description": "Online course at Udemy: \"Learn to program using the Java programming language\".",
+      "links": [
+        {
+          "title": "Online course",
+          "class": "fa-graduation-cap ",
+          "href": "https://www.udemy.com/java-tutorial/"
+        }
+      ]
     }
   ]
 }

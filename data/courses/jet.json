@@ -37,7 +37,9 @@
     {
       "title": "JPA #3",
       "description": "Querying JPA entities with Java Persistance Query Language - JPQL.",
-      "examples": "https://github.com/Smoczysko/introduction-to-jee-examples/tree/master/jpql"
+      "slides": "08-jpa-3",
+      "sources": "java-enterprise-technologies/08-jpa-3",
+      "examples": "https://github.com/Smoczysko/introduction-to-jee-examples/tree/master/jpa/jpql"
     }
   ],
   "resources": [

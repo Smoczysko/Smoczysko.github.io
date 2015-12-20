@@ -13,6 +13,12 @@
       "description": "Basic Java SE app running in console - Hangman game",
       "slides": "01-introduction",
       "sources": "introduction-to-java/01-introduction"
+    },
+    {
+      "title": "User flow",
+      "description": "Introduction to user flow based on Hangman game",
+      "slides": "02-user-flow",
+      "sources": "introduction-to-java/02-user-flow"
     }
   ],
   "literature": [

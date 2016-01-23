@@ -17,8 +17,8 @@
     {
       "title": "Classes and objects",
       "description": "Basic information about classes definition and creation.",
-      "slides": "02-classes-and-object",
-      "sources": "object-oriented-programming-languages/02-classes-and-object"
+      "slides": "02-classes-and-objects",
+      "sources": "object-oriented-programming-languages/02-classes-and-objects"
     },
     {
       "title": "Inheritance and polymorphism",

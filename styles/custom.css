@@ -1,5 +1,14 @@
+body {
+    background: url('../images/bg.jpg') no-repeat center center fixed;
+}
+
 footer p.social-media a + a {
     margin-left: 10px;
+}
+
+.list-group-item {
+    background-color: inherit;
+    border-width: 0 0 1px 0;
 }
 
 .list-group-item > .list-group-item-text:first-of-type {

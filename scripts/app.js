@@ -11,7 +11,10 @@
         function($routeProvider) {
             $routeProvider.
             when('/', {
-                redirectTo: '/courses'
+                templateUrl: 'views/home.html'
+            }).
+            when('/about', {
+                templateUrl: 'views/about.html'
             }).
             when('/courses', {
                 controller: 'CoursesController',
@@ -20,6 +23,9 @@
             when('/courses/:course', {
                 controller: 'CourseController',
                 templateUrl: 'views/course.html'
+            }).
+            when('/presentations', {
+                templateUrl: 'views/presentations.html'
             }).
             otherwise({
                 redirectTo: '/'

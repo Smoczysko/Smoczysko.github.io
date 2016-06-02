@@ -18,11 +18,7 @@
                     var deferred = $q.defer();
 
                     getJSON('courses.json', function (data) {
-                        var courses = _.map(data.courses, function (course) {
-                            return { "name": course.name, "code": course.code };
-                        });
-
-                        deferred.resolve(courses);
+                        deferred.resolve(data.courses);
                     }, function () {
                         deferred.reject();
                     });

@@ -2,18 +2,22 @@
   "courses": [
     {
       "name": "Java Enterprise Technologies",
+      "university": "University of Gdansk",
       "code": "jet"
     },
     {
       "name": "Object-Oriented Programming Languages",
+      "university": "Gdansk University of Technology",
       "code": "oopl"
     },
     {
       "name": "Rich User Interfaces in Web Applications",
+      "university": "Polish-Japanese Academy of Information Technology",
       "code": "rui"
     },
     {
       "name": "Introduction to Java",
+      "university": "Gdansk University of Technology",
       "code": "itj"
     }
   ]

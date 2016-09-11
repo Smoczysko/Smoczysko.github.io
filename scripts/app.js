@@ -10,9 +10,6 @@
     app.config(['$routeProvider',
         function($routeProvider) {
             $routeProvider.
-            when('/', {
-                templateUrl: 'views/home.html'
-            }).
             when('/about', {
                 templateUrl: 'views/about.html'
             }).
@@ -28,7 +25,7 @@
                 templateUrl: 'views/presentations.html'
             }).
             otherwise({
-                redirectTo: '/'
+                redirectTo: '/about'
             });
         }
     ]);

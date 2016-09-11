@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" class="aspect-4-3"><head><meta charset="UTF-8" /><meta name="generator" content="Asciidoctor 1.5.2, dzslides backend" /><title>Obiektowe Języki Programowania Interfejsy</title><meta name="author" content="Łukasz Rybka" /><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,200,300&amp;family=Cedarville+Cursive" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" /><style>
+<!DOCTYPE html><html lang="en" class="aspect-4-3"><head><meta charset="UTF-8" /><meta name="generator" content="Asciidoctor 1.5.2, dzslides backend" /><title>Obiektowe Języki Programowania Interfejsy</title><meta name="author" content="Łukasz Rybka" /><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,200,200&amp;family=Cedarville+Cursive" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" /><style>
 /*
 Monokai style - ported by Luigi Maselli - http://grigio.org
 */
@@ -127,10 +127,10 @@ pre .xml .cdata {
 }
 </style><style>
 /*
- Theme: Stormy
- Fonts: Yanone Kaffeesatz, Cedarville Cursive
+ Theme: Asciidoctor
+ Fonts: Neuton, Cedarville Cursive (optional)
 
- <link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,200,300" rel="stylesheet">
+ <link href="http://fonts.googleapis.com/css?family=Neuton:400,700,800,400italic" rel="stylesheet">
  <link href="http://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
 
  Style class:
@@ -143,36 +143,26 @@ pre .xml .cdata {
  .middle = Use on any element to vertically center it
  
  Color Palette:
- 
+
  Name           Hex
  =====================
- Eggshell .... #F1F2EC
- Red ......... #FF4342
- Light green . #D5EE5E
- Green ....... #87A660
- Light blue .. #43C5F1
- Blue ........ #3899BF
- Purple ...... #6C5482
- Light gray .. #D5D5D5
- Gray ........ #797979
- Dark Gray ... #6A6A61
- Black ....... #000000
-
- Light Cloud   #DDDCC5
- Grey          #958976
- Dark grey     #6A6A61
- Navy          #1D2326
- Fuschia       #611427
+ Background ... #ffffff 
+ Foreground ... #222222
+ Primary ...... #005498
+ Headings ..... #BA3925
+ Muted ........ #6F6F6F 
+ Shade ........ #1A6074
+ Border ....... #DDDDDD
+ ...
 */
-
 html, .view body {
-  background: #333333 url(../../images/gray-noise.png) repeat;
+  background: #ededed url(../../images/noise.png) repeat;
   counter-reset: slideidx;
-  font-family: 'Yanone Kaffeesatz', 'Alegreya Sans', sans-serif;
+  font-family: 'Neuton', sans-serif;
 }
 
 body, .view section {
-  background-color: #F1F2EC;
+  background: #ffffff;
   font-size: 17px;
   line-height: 1;
 }
@@ -186,12 +176,13 @@ section, .view head > title {
   position: absolute;
   bottom: -1.5em;
   right: .5em;
-  color: #FFFFFF;
+  color: #222;
   font-size: 3em;
 }
 
 .view head > title {
-  color: #FFFFFF;
+  color: #000;
+  font-weight: 800;
   text-align: center;
   margin: .5em 0 .25em;
   line-height: 1;
@@ -208,7 +199,7 @@ section:not(.title) {
 
 section.title h1 {
   font-size: 6em;
-  color: #1D2326;
+  color:dimgrey;
   position: relative;
   top: 40%;
   -webkit-transform: translate(0, -50%);
@@ -226,35 +217,20 @@ section.title footer {
   padding: 30px 50px;
 }
 
-section.title .subtitle {
-  display: block;
-  margin-top: 50px;
-}
-
-section.topic h2 {
-  color: #958976;
+section[class=topic] h2 {
+  color: #222222;
   font-size: 2.5em;
   margin-bottom: .5em;
-  text-align: right;
-}
-
-section.tilt {
-  -moz-transform:rotate(-4deg);
-  -o-transform:rotate(-4deg);
-  -webkit-transform:rotate(-4deg);
-}
-
-section.tilt h2 {
-  margin-top: -40px;
+  margin-top: -.5em;
 }
 
 section.intro, section.terminal {
-  background-color: #1D2326;
+  background-color: #111111;
 }
 
 section.intro h1,
 section.intro h2 {
-  color: #DDDCC5;
+  color: #FEFEFE;
   text-transform: lowercase;
   line-height: .7em;
   text-align: left;
@@ -268,7 +244,7 @@ section.intro.alt h2 {
 
 section.intro h1 strong,
 section.intro h2 strong {
-  color: #D5EE5E;
+  color: #4EA2B9;
   font-size: 1.51em;
   line-height: .8em;
 }
@@ -278,7 +254,7 @@ section.terminal pre.literal {
 }
 
 section.secret {
-  background-color: #958976;
+  background-color: #222222;
 }
 
 section.secret p {
@@ -288,7 +264,7 @@ section.secret p {
 }
 
 section.secret strong {
-  color: #43C5F1;
+  color: #136E9E;
   font-size: 2em;
   display: block;
   line-height: .8em;
@@ -298,9 +274,9 @@ section.recap > h1,
 section.recap > h2 {
   margin: 0;
   text-transform: uppercase;
-  color: #87A660;
+  color: #005498;
   font-size: 2em;
-  border: 15px solid #87A660;
+  border: 15px solid #005498;
   border-radius: 20px;
   position: absolute;
   right: -25px;
@@ -318,13 +294,13 @@ section.recap > h2 {
 }
 
 section.recap hgroup h2 {
-  color: #958976;
+  color: #222222;
   text-transform: uppercase;
   font-size: 4.4em;
 }
 
 section.recap hgroup h3 {
-  color: #611427;
+  color: #BA3925;
   text-transform: uppercase;
   font-size: 3em;
 }
@@ -350,12 +326,12 @@ section.question p strong {
 }
 
 section.ending {
-  background-color: #43C5F1;
+  background-color: #1A6074;
 }
 
 section.ending > h2 {
-  color: #F1F2EC;
-  font-size: 4.4em;
+  color: #ffffff;
+  font-size: 4em;
   text-transform: lowercase;
 }
 
@@ -364,20 +340,36 @@ section.ending > h2.name {
   top: 40%;
 }
 
+section.ending h2.name [class^="icon-"] {
+  color: #222;
+  font-size: 0.6em;
+  display: inline-block;
+  margin-left: -4px;
+  margin-right: -10px;
+  position: relative;
+  bottom: 5px;
+}
+
 section.ending footer,
 section.ending p.footer {
   position: absolute;
-  bottom: 22%;
   left: 0;
-  background-color: #FFFFFF;
+  background-color: #F5F5F5;
   width: 100%;
-  padding: 40px 0;
-  font-size: 3em;
+  padding: 10px;
+  font-size: 3.2em;
   text-align: center;
-  color: #43C5F1;
-  font-weight: 700;
-  top: 55%;
+  color: #1A6074;
+  font-weight: bold;
+  top: 60%;
+  height: 20%;
   margin: 0;
+}
+
+section.ending p.footer .icon-twitter {
+  font-size: 0.8em;
+  position: relative;
+  top: 3px;
 }
 
 .aspect-16-10 section.ending footer,
@@ -397,16 +389,44 @@ h3 {
 }
 
 a {
+  /*
   color: inherit;
   text-decoration: none;
+  */
+  color: #005498;
+  font-weight: normal;
 }
+
+kbd.keyseq {
+  color: #555555;
+}
+kbd:not(.keyseq) {
+  display: inline-block;
+  color: #222222;
+  font-size: 0.75em;
+  line-height: 1.4;
+  background-color: #F7F7F7;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+  margin: -0.15em 0.15em 0 0.15em;
+  padding: 0.2em 0.6em 0.2em 0.5em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+kbd kbd:first-child { margin-left: 0; }
+
+kbd kbd:last-child { margin-right: 0; }
 
 section ul {
   list-style: none;
-  font-size: 3em;
+  font-size: 2em;
   text-transform: uppercase;
   font-weight: 700;
-  color: #43C5F1;
+  color: #1A6074;
   text-align: right;
   margin-bottom: 1em;
 }
@@ -417,6 +437,11 @@ section ul.variants {
 
 section ul.split > li {
   width: 50%;
+}
+
+/* temporary!! */
+section ul.scatter {
+  font-size: 1.5em;
 }
 
 section ul.split > li:nth-of-type(2n),
@@ -447,27 +472,34 @@ section .graffiti {
   line-height: 1.5;
 }
 
-section .graffiti strong,
-section .graffiti em {
+section .graffiti strong, section .graffiti em {
   font-weight: 700;
   font-size: 1.5em;
 }
 
 section dt {
-  font-size: 3em;
-  color: #611427;
+  /*font-size: 3em;*/
+  font-size: 2.5em;
+  color: #BA3925;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 0;
   line-height: 1em;
 }
 
+section dt:after {
+  content: ':';
+}
+
 section dd {
-  color: #958976;
+  color: #222222;
+  /*text-transform: uppercase;*/
   font-weight: 700;
   line-height: 1em;
-  margin-bottom: 2em;
-  font-size: 2em;
+  /*margin-bottom: 2em;
+  font-size: 2em;*/
+  margin-bottom: 2.5em;
+  font-size: 1.5em;
 }
 
 section dt:nth-of-type(2n),
@@ -476,7 +508,7 @@ section dd:nth-of-type(2n) {
 }
 
 section p {
-  color: #958976;
+  color: #222222;
   font-weight: 700;
   font-size: 3.5em;
 }
@@ -521,8 +553,7 @@ section p.expression {
 }
 
 section p.follow-up {
-  /*color: #D5EE5E;*/
-  color: #958976;
+  color: #222222;
   font-weight: 700;
   font-size: 2em;
   margin-top: -.5em;
@@ -537,73 +568,45 @@ section p.point {
   font-weight: 700;
 }
 
-section em {
-  color: #611427;
+section em, section i {
+  color: #BA3925;
   font-style: normal;
 }
 
-section em .light {
-  font-weight: 300;
-}
-
-section.intro em {
-  color: #D5EE5E;
-}
-
 section strong {
-  color: #611427;
+  color: #BA3925;
 }
-
-strong .block {
-  padding-right: 1000px;
-}
-
-/*
-strong .block:after {
-  display: table;
-  content: " ";
-}*/
 
 section del {
   color: #6A6A61;
 }
 
 section p del span {
-  color: #958976;
+  color: #222222;
   font-weight: 700;
-}
-
-.sans {
-  font-family: sans-serif;
 }
 
 blockquote {
   padding: 0 0 0 15px;
   margin: -10px 2em 0 2em;
-  border-left: 5px solid #ccc;
+  border-left: 5px solid #BA3925;
 }
 
 blockquote:before {
-  color: #611427;
+  color: #BA3925;
   content: '\201C';
-  font-size: 8em;
-  font-weight: 700;
+  font-size: 5em;
   float: left;
-  margin-left: -.6em;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+  margin-left: -.8em;
 }
 
 section blockquote p {
-  color: #1D2326;
-  font-weight: 400;
-  line-height: 1.5;
+  color: #333;
+  line-height: 1.2;
   margin-bottom: .5em;
   font-style: italic;
-  font-size: 3.5em;
-}
-
-section blockquote.small p {
-  font-size: 2.6em !important;
+  font-size: 2.7em;
+  font-weight: normal;
 }
 
 blockquote p em {
@@ -619,78 +622,38 @@ blockquote cite {
   font-size: 1.5em;
   display: block;
   line-height: 1.8;
-  color: #87A660;
+  color: #005498;
   font-style: normal;
   margin-top: .25em;
-  padding-bottom: .25em;
 }
 
 blockquote cite:before {
   content: '\2014 \00A0';
 }
 
-figure > a,
-figure > a > img {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-figure > img.elevate {
-  top: -5%;
-}
-
-figure > img.fit {
-  max-height: 100%;
-  max-width: 100%;
-  height: auto;
-  width: auto;
-}
-
-figure > img.relax-y {
-  height: auto;
-  top: auto;
-  margin: auto 0;
-}
-
-figure > img.relax-x {
-  width: auto;
-}
-
 figcaption {
+  opacity: 0;
   font-size: 3em;
-  /*color: #000000;*/
-  color: #611427;
+  color: #000000;
   font-weight: 700;
   text-align: right;
   position: absolute;
-  bottom: .4em;
-  right: .6em;
+  bottom: 20px;
+  right: 35px;
   width: 100%;
 }
 
-figcaption.left {
-  right: 0;
-  left: .6em;
-  text-align: left;
-}
-
+/*
 figcaption.invert {
   color: #FFFFFF;
   text-shadow: 2px 2px #000000;
 }
+*/
 
-figcaption.band {
-  /*color: #611427;*/
-  right: 0;
-  text-align: left;
-  background-color: rgba(255, 255, 255, .75);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-  padding-left: .5em;
-  line-height: 1.5em;
-  padding-bottom: .05em;
-  bottom: 1em;
+figure img.invert + figcaption {
+  font-size: 4em;
+  color: #FFFFFF;
+  /*text-shadow: 2px 2px #000000;*/
 }
 
 section.title footer {
@@ -698,19 +661,23 @@ section.title footer {
   bottom: 0;
   width: 100%;
   padding: 40px;
-  background-color: #F3F4F8;
-  border-top: 1px solid #CCC;
+  background-color: #F5F5F5;
+  border-top: 1px solid #DDDDDD;
+}
+
+section.title footer span {
+  color: #4d4d4d;
+  font-size: .8em;
 }
 
 section.source {
-  /*background-color: #272822;*/
-  background-color: #000000;
   padding: 30px !important;
 }
 
 section.source h2 {
   margin: 0 .5em .5em 0;
-  color: #DDDCC5;
+  color: #7A2518;
+  /*color: #222;*/
   text-align: right;
 }
 
@@ -719,20 +686,68 @@ section.source.lhs h2 {
 }
 
 section.source div.title {
-  color: #958976;
+  /*color: #7A2518;*/
+  color: #333;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 1.25em;
   margin-bottom: .3em;
   padding-left: 1px;
 }
 
-section pre code {
-  font-family: "DejaVu Sans Mono", "Droid Sans Mono", Menlo, Monaco, "Courier New", monospace;
-  font-size: 1em;
-  line-height: 1.2;
-  background: rgba(255,255,255,.075);
-  border: 1px solid rgba(255,255,255,.2);
+section *:not(pre) > code {
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  color: #6D180B;
+  border: 1px solid #CCC;
+  background-color: #F2F2F2;
+  white-space: nowrap;
+  padding: 1px 3px 0;
+  font-size: 0.8em;
+  border-radius: 4px;
+}
+
+pre code {
+  color: black;
+}
+
+pre code .comment {
+  color: #DDD;
+}
+
+pre .class .title {
+  color: #000000;
+}
+
+pre code .javadoc {
+  color: darkcyan;
+}
+
+section pre code, section pre.literal {
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  font-size: .9em;
+  line-height: 1.3;
   margin-bottom: 1em;
+  padding: 0.5em;
+  overflow-y: auto;
+  /*max-height: 375px;*/
+  /*
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  background: #F2F2F2;
+  */
+  border: 0 dotted #ccc;
+  border-width: 1px 0; 
+  background: transparent;
+  white-space: pre-wrap;
+}
+
+section pre.nowrap code {
+  white-space: pre;
+  /*overflow-x: hidden;*/
+}
+
+section pre.literal {
+  font-size: 0.65em;
+  line-height: 1.1;
 }
 
 .middle,
@@ -754,19 +769,19 @@ section > p {
 }
 
 section p.statement strong {
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: .75em;
+}
+
+section p.statement .icon-caret-right {
+  font-size: 1.25em;
+  position: relative;
+  bottom: 8px;
 }
 
 img.middle {
   display: block;
   margin: 0 auto;
-}
-
-img.corner {
-  position: absolute;
-  right: 2em;
-  bottom: 2em;
 }
 
 img.stretch-x {
@@ -775,6 +790,21 @@ img.stretch-x {
 
 img.stretch-y {
   height: 100%;
+}
+
+figure > img.relax-y {
+  height: auto;
+  top: auto;
+  margin: auto 0;
+}
+
+figure > img.relax-x {
+  width: auto;
+}
+
+img.scale{
+  max-height: 97.5%;
+  width: auto;
 }
 
 .hide {
@@ -793,23 +823,19 @@ img.stretch-y {
   text-align: right;
 }
 
-.text-center {
-  text-align: center;
-}
-
 .auto-width {
   width: auto !important;
 }
 
 span.detail {
-  font-size: .6em;
-  color: #958976;
-  opacity: 0.6;
-  font-weight: 400;
+  font-size: .8em;
+  color: #3e999f;
+  opacity: 0.5;
+  font-weight: normal;
 }
 
 .mild {
-  color: #87A660;
+  color: #005498;
 }
 
 /* Incremental elements */
@@ -821,8 +847,7 @@ span.detail {
 
 /* The current item */
 .incremental > *[aria-selected] {
-  /* bug in Chrome makes it jump when opacity goes to 1 */
-  opacity: .99;
+  opacity: 1;
 }
 
 /* The items to-be-selected */
@@ -848,7 +873,7 @@ span.detail {
 /* TODO: merge the overrides below into the sheet */
 section.title h1 {
   font-size: 4em;
-  line-height: 1.1;
+  line-height: 1.3;
 }
 
 section.title h1 strong {
@@ -856,25 +881,10 @@ section.title h1 strong {
   font-style: italic;
 }
 
-#zen-of-writing section.title h1 strong {
-  display: inline-block;
-  margin-left: -.15em;
-  padding-right: .05em;
-}
-
-section.title h1 strong .subtle {
-  font-weight: 300;
-  color: #CCC;
-}
-
-section.title h1 em {
-  /*font-style: italic;*/
-  color: #878660;
-}
-
 section.intro h1 strong,
 section.intro h2 strong {
-  font-size: 3.5em;
+  /*font-size: 3.5em;*/
+  font-size: 3em;
 }
 
 section p {
@@ -901,15 +911,6 @@ section > p {
   transform: none;
 }
 
-section pre.literal {
-  font-size: .8em;
-  font-weight: bold;
-}
-
-section pre code {
-  white-space: pre-wrap;
-}
-
 section pre:nth-of-type(2):not(.continue) code {
   font-size: .8em;
   line-height: 1.4;
@@ -920,6 +921,10 @@ section ul {
   text-align: left;
 /*  font-size: 1.5em;*/
   line-height: 1.1;
+}
+
+section ul li {
+  margin: 0 0 1em 0;
 }
 
 section ul ul {
@@ -940,23 +945,30 @@ section.fit > img {
   display: block;
 }
 
-.colist {
-  color: #DDDCC5;
+.colist td {
+  color: #333;
+  padding: 4px 4px 4px 0;
 }
 
-.intro .small {
-  font-size: .5em;
+.admonitionblock {
+  margin-bottom: 1em;
 }
 
-.intro .smaller {
-  font-size: 2.5em;
+.admonitionblock td.icon, .admonitionblock td.content {
+  font-size: 1.5em;
+  padding: 5px 10px 5px 0px;
 }
 
+ol {
+  margin-left: 1.5em;
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
 
 .conum {
   display: inline-block;
   color: white !important;
-  background-color: #666666;
+  background-color: #222222;
   -webkit-border-radius: 100px;
   border-radius: 100px;
   text-align: center;
@@ -978,6 +990,12 @@ section.fit > img {
 .conum + b { display: none; }
 .conum:after { content: attr(data-value); }
 .conum:not([data-value]):empty { display: none; }
+
+.icon-note:before { content:"\f05a"; }
+.icon-tip:before { content:"\f0eb"; }
+.icon-warning:before { content: "\f071"; }
+.icon-caution:before { content: "\f06d"; }
+.icon-important:before { content:"\f06a"; }
 </style><style>
 * {
   margin: 0;
@@ -1132,8 +1150,8 @@ section {
   -ms-transition: opacity 450ms ease-out 0ms;
   transition: opacity 450ms ease-out 0ms;
 }
-</style></head><body><section class="title"><h1>Obiektowe Języki Programowania Interfejsy</h1><footer><span class="author">Łukasz Rybka</span><span class="divider">&nbsp;&middot;&nbsp;</span><span class="author">Gdańsk 2015</span></footer></section><section class="topic"><h2>Interfejsy</h2><div class="exampleblock"><div class="content"><blockquote><p>Interfejsy i klasy abstrakcyjne to strukturyzowane środki oddzielenia interfejsu od implementacji.</p><br /><cite>Bruce Eckel</cite></blockquote></div></div></section>
-<section class="topic"><h2>Interfejsy</h2><div class="exampleblock"><div class="content"><blockquote><p>Słowo kluczowe <strong>interface</strong> generuje (&#8230;&#8203;) abstrakcyjną klasę bazową, która jest całkowicie (&#8230;&#8203;) implementacji.</p><br /><cite>Bruce Eckel</cite></blockquote></div></div></section>
+</style></head><body><section class="title"><h1>Obiektowe Języki Programowania Interfejsy</h1><footer><span class="author">Łukasz Rybka</span><span class="divider">&nbsp;&middot;&nbsp;</span><span class="author">Gdańsk 2016/17</span></footer></section><section class="topic"><h2>Interfejsy</h2><div class="exampleblock"><div class="content"><blockquote><p>Interfejsy i klasy abstrakcyjne to strukturyzowane środki oddzielenia interfejsu od implementacji.</p><br /><cite>Bruce Eckel</cite></blockquote></div></div></section>
+<section class="topic"><h2>Interfejsy</h2><div class="exampleblock"><div class="content"><blockquote><p>Słowo kluczowe <strong>interface</strong> generuje (&#8230;&#8203;) abstrakcyjną klasę bazową, która jest całkowicie pozbawiona (&#8230;&#8203;) implementacji.</p><br /><cite>Bruce Eckel</cite></blockquote></div></div></section>
 <section class="topic source"><h2>Przykład prostego interfejsu</h2><div class="listingblock"><pre class="highlight"><code class="java">public interface Drawable {
     public void draw();
 

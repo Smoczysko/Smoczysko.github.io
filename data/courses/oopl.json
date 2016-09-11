@@ -1,7 +1,7 @@
 {
   "name": "Object-Oriented Programming Languages",
   "code": "oopl",
-  "description": "Materials for Object-Oriented Programming Languages course given at Gdańsk University of Technology, faculty of applied physics and mathematics in 2015/16.",
+  "description": "Materials for Object-Oriented Programming Languages course given at Gdańsk University of Technology, faculty of Applied Physics and Mathematics since 2015.",
   "goal": "Course goal is to give students brief understanding of programming in Java and it's third-one in series of courses about OO programming (from theory to practical uses in different platforms and languages).",
   "quote": {
     "text": "Tell me and I forget. Teach me and I remember. Involve me and I learn.",

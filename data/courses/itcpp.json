@@ -1,0 +1,28 @@
+{
+  "name": "Introduction to C++",
+  "code": "itcpp",
+  "description": "Materials for Introduction to C++ course given at Gdańsk University of Technology, faculty of applied physics and mathematics in 2016/17.",
+  "goal": "Course goal is to give students brief understanding of programming using C++ standard.",
+  "quote": {
+    "text": "There are no mistakes. The events we bring upon ourselves, no matter how unpleasant, are necessary in order to learn what we need to learn; whatever steps we take, they're necessary to reach the places we've chosen to go.",
+    "author": "Richard Bach"
+  },
+  "lectures": [
+    {
+      "title": "Introduction",
+      "description": "Basic project structure and operations.",
+      "slides": "01-introduction",
+      "sources": "introduction-to-c-plus-plus/01-introduction"
+    }
+  ],
+  "literature": [
+    {
+      "title": "Object-Oriented Software Construction",
+      "description": "Bertrand Meyer"
+    },
+    {
+      "title": "Symfonia C++ standard",
+      "description": "Jerzy Grębosz"
+    }
+  ]
+}

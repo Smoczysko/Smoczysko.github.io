@@ -19,6 +19,11 @@
       "name": "Introduction to Java",
       "university": "Gdansk University of Technology",
       "code": "itj"
+    },
+    {
+      "name": "Introduction to C++",
+      "university": "Gdansk University of Technology",
+      "code": "itcpp"
     }
   ]
 }

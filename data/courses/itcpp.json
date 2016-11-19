@@ -7,7 +7,7 @@
     "text": "There are no mistakes. The events we bring upon ourselves, no matter how unpleasant, are necessary in order to learn what we need to learn; whatever steps we take, they're necessary to reach the places we've chosen to go.",
     "author": "Richard Bach"
   },
-  "lectures": [
+  "laboratories": [
     {
       "title": "Introduction",
       "description": "Basic project structure and operations.",

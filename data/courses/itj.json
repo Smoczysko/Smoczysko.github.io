@@ -1,7 +1,7 @@
 {
   "name": "Introduction to Java",
   "code": "itj",
-  "description": "Materials for Introduction to Java course given at Gdańsk University of Technology, faculty of applied physics and mathematics in 2015/16.",
+  "description": "Materials for Introduction to Java course given at Gdańsk University of Technology, faculty of applied physics and mathematics in 2016/17.",
   "goal": "Course goal is to give students brief understanding of Java Standard Edition 6/7 and its APIs.",
   "quote": {
     "text": "I am always doing that which I cannot do, in order that I may learn how to do it.",
@@ -10,15 +10,21 @@
   "lectures": [
     {
       "title": "Introduction",
-      "description": "Basic Java SE app running in console - Hangman game",
-      "slides": "01-introduction",
-      "sources": "introduction-to-java/01-introduction"
+      "description": "Course introduction with basic information about rules, grades and covered materials.",
+      "slides": "lectures/01-introduction",
+      "sources": "introduction-to-java/lectures/01-introduction"
     },
     {
-      "title": "User flow",
-      "description": "Introduction to user flow based on Hangman game",
-      "slides": "02-user-flow",
-      "sources": "introduction-to-java/02-user-flow"
+      "title": "Classes and objects",
+      "description": "Basic information about classes definition and creation.",
+      "slides": "lectures/02-classes-and-objects",
+      "sources": "introduction-to-java/lectures/02-classes-and-objects"
+    },
+    {
+      "title": "Inheritance and polymorphism",
+      "description": "Inheritance in practice in Java: basics mechanics, super(), overriding and overloading, abstract classes and polymorphism.",
+      "slides": "lectures/03-inheritance",
+      "sources": "introduction-to-java/lectures/03-inheritance"
     }
   ],
   "literature": [

@@ -10,15 +10,26 @@
             <p ng-show="course.goal">{{ course.goal }}</p>
         </div>
 
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-12 text-center" ng-show="course.lectures">
             <br>
             <hr>
             <h2 class="intro-text">Lectures</h2>
             <hr>
         </div>
 
-        <div class="col-lg-12" ng-repeat="lecture in course.lectures">
-            <lecture lecture="{{ lecture }}"></lecture>
+        <div class="col-lg-12" ng-repeat="item in course.lectures">
+            <lecture lecture="{{ item }}"></lecture>
+        </div>
+
+        <div class="col-lg-12 text-center" ng-show="course.laboratories">
+            <br>
+            <hr>
+            <h2 class="intro-text">Laboratories</h2>
+            <hr>
+        </div>
+
+        <div class="col-lg-12" ng-repeat="item in course.laboratories">
+            <lecture lecture="{{ item }}"></lecture>
         </div>
 
         <div class="col-lg-12 text-center" ng-show="course.resources">

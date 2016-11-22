@@ -43,6 +43,12 @@
       "description": "Handling different kinds of exceptions in Java, exceptions hierarchy and creation of custom exceptions specific to our application.",
       "slides": "06-exceptions",
       "sources": "object-oriented-programming-languages/06-exceptions"
+    },
+    {
+      "title": "Generics",
+      "description": "Introduction to generic types and methods and their gotchas.",
+      "slides": "07-generics",
+      "sources": "object-oriented-programming-languages/07-generics"
     }
   ],
   "literature": [

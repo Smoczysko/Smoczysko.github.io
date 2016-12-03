@@ -27,6 +27,13 @@
       "sources": "introduction-to-java/lectures/03-inheritance"
     }
   ],
+  "laboratories": [
+    {
+      "title": "Laboratories 1",
+      "description": "Basic project structure and operations.",
+      "slides": "laboratories/lab1"
+    }
+  ],
   "literature": [
     {
       "title": "Thinking in Java, 4th edition",

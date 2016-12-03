@@ -1,5 +1,5 @@
 (function(angular) {
-    var app = angular.module('SmoczyskoServices', ['ngResource']);
+    var app = angular.module('services', ['ngResource']);
 
     app.provider('Courses', function () {
         this.$get = ['$resource', '$q', function ($resource, $q) {

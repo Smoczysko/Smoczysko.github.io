@@ -1,10 +1,10 @@
 (function(angular) {
-    var app = angular.module('SmoczyskoApp', [
+    var app = angular.module('app', [
         'ngRoute',
 
-        'SmoczyskoDirectives',
-        'SmoczyskoServices',
-        'SmoczyskoControllers'
+        'directives',
+        'services',
+        'controllers'
     ]);
 
     app.config(['$routeProvider',

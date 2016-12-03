@@ -30,7 +30,7 @@
       "title": "Interfaces",
       "description": "Interfaces and object relation called composition.",
       "slides": "04-interfaces",
-      "sources": "object-oriented-programming-languages/01-javascript"
+      "sources": "object-oriented-programming-languages/04-interfaces"
     },
     {
       "title": "Collections",

@@ -1,5 +1,5 @@
 (function(angular) {
-    var app = angular.module('SmoczyskoDirectives', []);
+    var app = angular.module('directives', []);
     
     app.directive('copyrightYears', function () {
         return {
@@ -32,6 +32,15 @@
         };
     });
 
+    function getLinkFunction(observable) {
+        return function(scope, element, attrs) {
+            attrs.$observe('lecture', function (lecture) {
+                var json = JSON.parse(lecture);
+                _.extend(scope, json);
+            });
+        };
+    }
+
     app.directive('lecture', function () {
         return {
             restrict: 'E',
@@ -39,6 +48,19 @@
             link: function(scope, element, attrs) {
                 attrs.$observe('lecture', function(lecture) {
                     var json = JSON.parse(lecture);
+                    _.extend(scope, json);
+                });
+            }
+        };
+    });
+
+    app.directive('courseFile', function () {
+        return {
+            restrict: 'E',
+            templateUrl: 'views/course-file.html',
+            link: function(scope, element, attrs) {
+                attrs.$observe('file', function(resource) {
+                    var json = JSON.parse(resource);
                     _.extend(scope, json);
                 });
             }

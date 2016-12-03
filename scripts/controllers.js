@@ -1,5 +1,5 @@
 (function (angular) {
-    var app = angular.module('SmoczyskoControllers', []);
+    var app = angular.module('controllers', []);
 
     app.controller('CoursesController', ['$scope', 'Courses', function ($scope, Courses) {
         Courses.courses().then(function (courses) {

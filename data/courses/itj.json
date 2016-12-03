@@ -25,13 +25,36 @@
       "description": "Inheritance in practice in Java: basics mechanics, super(), overriding and overloading, abstract classes and polymorphism.",
       "slides": "lectures/03-inheritance",
       "sources": "introduction-to-java/lectures/03-inheritance"
+    },
+    {
+      "title": "Interfaces",
+      "description": "Interfaces and object relation called composition.",
+      "slides": "lectures/04-interfaces",
+      "sources": "introduction-to-java/lectures/04-interfaces"
+    },
+    {
+      "title": "Exceptions",
+      "description": "Handling different kinds of exceptions in Java, exceptions hierarchy and creation of custom exceptions specific to our application.",
+      "slides": "lectures/05-exceptions",
+      "sources": "introduction-to-java/lectures/05-exceptions"
+    },
+    {
+      "title": "Collections",
+      "description": "Different kinds of collections and their application with different kinds of problems. Performance issues and generics will be briefly mentioned during this lecture.",
+      "slides": "lectures/06-collections",
+      "sources": "introduction-to-java/lectures/06-collections"
+    },
+    {
+      "title": "Generics",
+      "description": "Introduction to generic types and methods and their gotchas.",
+      "slides": "lectures/07-generics",
+      "sources": "introduction-to-java/lectures/07-generics"
     }
   ],
-  "laboratories": [
+  "files": [
     {
-      "title": "Laboratories 1",
-      "description": "Basic project structure and operations.",
-      "slides": "laboratories/lab1"
+      "name": "Laboratories 1",
+      "path": "files/itj_lab_1.pdf"
     }
   ],
   "literature": [
@@ -67,17 +90,6 @@
     }
   ],
   "resources": [
-    {
-      "title": "Bootstrap application",
-      "description": "Basic and minimalistic application skeleton for Hangman game in Java SE 7 with Gradle as build and tool.",
-      "links": [
-        {
-          "title": "Code",
-          "class": "fa-github",
-          "href": "https://github.com/Smoczysko/introduction-to-java-laboratories"
-        }
-      ]
-    },
     {
       "title": "Java Tutorial for Complete Beginners",
       "description": "Online course at Udemy: \"Learn to program using the Java programming language\".",

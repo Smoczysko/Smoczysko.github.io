@@ -55,6 +55,14 @@
     {
       "name": "Laboratories 1",
       "path": "files/itj_lab_1.pdf"
+    },
+    {
+      "name": "Laboratories 2",
+      "path": "files/itj_lab_2.pdf"
+    },
+    {
+      "name": "Laboratories 3",
+      "path": "files/itj_lab_3.pdf"
     }
   ],
   "literature": [

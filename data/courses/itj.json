@@ -53,16 +53,24 @@
   ],
   "files": [
     {
-      "name": "Laboratories 1",
+      "name": "Laboratories 1 - introduction",
       "path": "files/itj_lab_1.pdf"
     },
     {
-      "name": "Laboratories 2",
+      "name": "Laboratories 2 - inheritance and polymorphism",
       "path": "files/itj_lab_2.pdf"
     },
     {
-      "name": "Laboratories 3",
+      "name": "Laboratories 3 - interfaces",
       "path": "files/itj_lab_3.pdf"
+    },
+    {
+      "name": "Laboratories 4 - exceptions",
+      "path": "files/itj_lab_4.pdf"
+    },
+    {
+      "name": "Laboratories 5 - collections",
+      "path": "files/itj_lab_5.pdf"
     }
   ],
   "literature": [

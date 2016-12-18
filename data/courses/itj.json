@@ -49,6 +49,20 @@
       "description": "Introduction to generic types and methods and their gotchas.",
       "slides": "lectures/07-generics",
       "sources": "introduction-to-java/lectures/07-generics"
+    },
+    {
+      "title": "Extended",
+      "description": "Additional Java language mechanisms",
+      "slides": "lectures/08-extended",
+      "sources": "introduction-to-java/lectures/08-extended"
+    }
+  ],
+  "laboratories": [
+    {
+      "title": "Project",
+      "description": "Information about final project.",
+      "slides": "laboratories/project",
+      "sources": "introduction-to-java/laboratories/project"
     }
   ],
   "files": [
